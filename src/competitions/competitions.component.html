@@ -1,1 +1,18 @@
-<p>Hello</p>
+<div>
+
+  <div class="clubs">
+
+    @for(club of clubs; track club.id) {
+     <div class="rounded overflow-hidden shadow-lg border border-gray-200 mb-4">
+       <div class="px-6 py-4">
+         <div class="font-bold text-xl mb-2">{{ club.name }}</div>
+         <p class="text-gray-700 text-base">{{ club.country }}</p>
+         <p class="text-gray-700 text-base">{{ club.code }}</p>
+       </div>
+
+     </div>
+    }
+
+  </div>
+
+</div>

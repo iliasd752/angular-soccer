@@ -1,16 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Club, TeamService} from "./team.service";
+import {RouterOutlet} from "@angular/router";
 
-interface Club {
-  name: string
-  code: string
-  country: string
-  id: string
-}
+
 @Component({
   selector: 'app-competitions',
   standalone: true,
-  imports: [
+  imports: [RouterOutlet
   ],
   templateUrl: './competitions.component.html',
   styleUrl: './competitions.component.css'
@@ -19,18 +16,32 @@ interface Club {
 
 
 export class CompetitionsComponent implements OnInit {
-  clubs: Club[] = [];
+  teamService: TeamService = inject(TeamService);
 
 
   constructor(private http: HttpClient) {
   }
 
-  ngOnInit(): void {
+  addClub(club: Club) {
+    const clubName = `club ${club.id}`;
+    this.teamService.addClub({code: club.code, country: club.country, id: club.id, name: club.name});
+  }
+
+  get clubs() {
+    return this.teamService.clubs;
+  }
+
+  ngOnInit = (): void => {
     this.http.get<Club[]>('http://localhost:3000/clubs').subscribe(clubs => {
-      this.clubs = clubs;
+      this.clubs.update(clubs => [...clubs, club]);
       console.log('Clubs', clubs);
     });
-  }
+  };
+
+
+
+
 }
+
 
 

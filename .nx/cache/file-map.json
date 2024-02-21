@@ -110,7 +110,7 @@
         },
         {
           "file": "src/app/app.component.html",
-          "hash": "7859198322528539800"
+          "hash": "17204890001364932107"
         },
         {
           "file": "src/app/app.component.spec.ts",
@@ -121,7 +121,7 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "17211787015576064808",
+          "hash": "5764313704249266778",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router"
@@ -137,7 +137,7 @@
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "4678829195343924743",
+          "hash": "9885118091806809233",
           "deps": [
             "npm:@angular/router",
             "npm:@angular/core"
@@ -157,7 +157,7 @@
         },
         {
           "file": "src/competitions/competitions.component.html",
-          "hash": "2410214725108753004"
+          "hash": "6014244956184695364"
         },
         {
           "file": "src/competitions/competitions.component.spec.ts",
@@ -168,7 +168,7 @@
         },
         {
           "file": "src/competitions/competitions.component.ts",
-          "hash": "9600217859615267344",
+          "hash": "15927582459650126805",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -184,9 +184,11 @@
         },
         {
           "file": "src/main.ts",
-          "hash": "4169901790405087765",
+          "hash": "1448422209814675100",
           "deps": [
-            "npm:@angular/platform-browser"
+            "npm:@angular/platform-browser",
+            "npm:@angular/core",
+            "npm:@angular/common"
           ]
         },
         {
@@ -226,7 +228,7 @@
         },
         {
           "file": "tsconfig.json",
-          "hash": "3343339550490537441"
+          "hash": "17967646271658207659"
         },
         {
           "file": "tsconfig.spec.json",
